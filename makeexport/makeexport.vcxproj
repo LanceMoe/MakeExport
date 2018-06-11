@@ -142,8 +142,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="res\makeexport.ico" />
-    <None Include="res\makeexport.rc2" />
-    <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="makeexport.rc" />

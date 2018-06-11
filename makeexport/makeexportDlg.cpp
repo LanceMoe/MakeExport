@@ -10,11 +10,7 @@
 #define new DEBUG_NEW
 #endif
 
-
 // CmakeexportDlg 对话框
-
-
-
 
 CmakeexportDlg::CmakeexportDlg(CWnd* pParent /*=NULL*/)
 	: CDialog(CmakeexportDlg::IDD, pParent)
@@ -44,7 +40,6 @@ BEGIN_MESSAGE_MAP(CmakeexportDlg, CDialog)
 	ON_BN_CLICKED(IDCANCEL, &CmakeexportDlg::OnBnClickedCancel)
 	ON_BN_CLICKED(IDC_BUTTON1, &CmakeexportDlg::OnBnClickedButton1)
 END_MESSAGE_MAP()
-
 
 // CmakeexportDlg 消息处理程序
 
@@ -104,8 +99,6 @@ HCURSOR CmakeexportDlg::OnQueryDragIcon()
 {
 	return static_cast<HCURSOR>(m_hIcon);
 }
-
-
 
 void CmakeexportDlg::OnBnClickedOpenfile()
 {
@@ -281,7 +274,6 @@ CString CmakeexportDlg::ShowAsDef()
 	return strText;
 }
 
-
 VOID CmakeexportDlg::PrintObjects( LPOBJECTITEM item,CString& strText,LPCTSTR prefix,int itemindex )
 {
 	CString strValue;
@@ -404,8 +396,6 @@ namespace
  variant
  function
 }
-
-
 */
 
 CString ReplaceOnce( CString str,LPCTSTR lpFind,LPCTSTR lpreplace )
@@ -765,24 +755,19 @@ void CmakeexportDlg::OnBnClickedButton1()
 
 	if( 0 == pf )
 	{
-
 		AfxMessageBox( _T("创建文件失败"));
 		return;
 	}
 	fwrite( (const char*)strText,strText.GetLength(),1,pf );
-
 	fclose(pf);
-
 	
 	strFile.Format( _T("%s.h"),(LPCTSTR)m_strTitle );
-
 	strText = ShowAsSource();
 
 	pf = _tfopen( strFile,_T("w+b") );
 
 	if( 0 == pf )
 	{
-
 		AfxMessageBox( _T("创建文件失败"));
 		return;
 	}
@@ -790,7 +775,6 @@ void CmakeexportDlg::OnBnClickedButton1()
 
 	fclose(pf);
 	
-
 	strFile.Format(_T("link /LIB /DEF:%s.def /OUT:%s.lib"),(LPCTSTR)m_strTitle,(LPCTSTR)m_strTitle);
 	strText = strFile;
 

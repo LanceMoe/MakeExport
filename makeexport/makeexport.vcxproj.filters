@@ -49,10 +49,6 @@
     <None Include="res\makeexport.ico">
       <Filter>资源文件</Filter>
     </None>
-    <None Include="res\makeexport.rc2">
-      <Filter>资源文件</Filter>
-    </None>
-    <None Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="makeexport.rc">
