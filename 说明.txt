@@ -1,0 +1,5 @@
+由dll生成头文件以及lib文件
+要生成lib文件，需要用到vs的link.exe，所以你需要安装vs来生成lib
+
+由def创建lib命令：
+link /LIB /DEF:C:\a.def /OUT:C:\b.lib
